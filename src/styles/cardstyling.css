@@ -1,0 +1,72 @@
+.card-content {
+  width: 295px;
+  height: 377px;
+  background: #4ba489;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  position: relative;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 19.1px 0px;;
+}
+.gold{
+    width: 295px;
+    height: 370px;
+    position: absolute;
+}
+.flower1{
+    width: 155px;
+    height: 165px;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    left: 170px;    
+}
+.flower2{
+    width: 127px;
+    height: 135px;
+    z-index: 1;
+    position: absolute;
+    top: 250px;
+    left: -20px;
+}
+.card-text{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+} 
+.heading{
+    font-family: Aboreto;
+    font-size: 30px;
+    font-weight: 300;
+width: 142px;
+height: 45px;
+      color: #4ba489;
+margin-top: 60px;
+margin-bottom: 0;
+
+}
+.card-text>p{
+    width: 170px;
+    text-align: center;
+    color: #4ba489;
+}
+
+@media screen and (max-width: 768px){
+    
+    .card-content{
+        scale: 0.7;
+    }
+}

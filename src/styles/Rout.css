@@ -1,0 +1,121 @@
+.route>h2{
+    font-family: sans-serif;
+    font-size: 70px;
+    font-weight: 150;
+    color: #dcdda6;
+}
+.route>p{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #dcdda6;
+}
+.route{
+    position: sticky;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    top: 100px;
+}
+.circle{
+    border: 10px solid #f3ecba;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+
+}
+.circle1 {
+  border: 2px solid #f3ecba;
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: rotateScale 4s linear infinite;
+}
+
+@keyframes rotateScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(90deg) scale(1.08);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+
+  75% {
+    transform: rotate(270deg) scale(1.08);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@media screen and (max-width: 768px){
+
+    .route{
+       
+        gap: 0.8rem;
+        padding: 15px;
+    }
+
+    .route>h2{
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    .route>p{
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .circle{
+        width: 45px;
+        height: 45px;
+        border-width: 6px;
+    }
+
+    .circle1{
+        width: 90px;
+        height: 90px;
+    }
+
+}
+@media screen and (max-width: 428px) {
+      .route{
+       
+        gap: 0.8rem;
+        padding: 15px;
+    }
+
+    .route>h2{
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    .route>p{
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .circle{
+        width: 45px;
+        height: 45px;
+        border-width: 6px;
+    }
+
+    .circle1{
+        width: 90px;
+        height: 90px;
+    }
+}

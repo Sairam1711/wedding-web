@@ -1,0 +1,95 @@
+
+.text{
+    color: #f3ecba;
+    font-family: Cormorant Upright;
+    font-size: 15px;
+    
+}
+.vinayagar{
+    width: 166px;
+    height: 166px;
+}
+.invite{
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+h4{
+    font-family: Cormorant Upright;
+    font-size: 25px;
+    color: #f3ecba;
+    font-weight: 400;
+
+}
+.h-line{
+    width: 48px;
+    height: 2px;
+    background-color: #f3ecba;
+    margin: 0;
+}
+h2{
+    font-family: Cormorant Upright;
+    font-size: 70px;
+    color: #f3ecba;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h1{
+    font-family: Cormorant Upright;
+    font-size: 120px;
+    color: #f3ecba;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+p{
+    font-family: Cormorant Upright;
+    font-size: 25px;
+    color: #f3ecba;
+}
+@media screen and (max-width: 768px){
+
+    .vinayagar{
+        width: 110px;
+        height: 110px;
+    }
+
+    .text{
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    h4{
+        font-size: 18px;
+    }
+
+    h2{
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    h1{
+        font-size: 60px;
+        line-height: 1.1;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    p{
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 0 12px;
+    }
+
+    .invite{
+        gap: 0.7rem;
+        padding: 15px;
+    }
+
+    .h-line{
+        width: 35px;
+    }
+}

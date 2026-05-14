@@ -1,0 +1,126 @@
+/* ================= MAIN CONTAINER ================= */
+
+.ThinktoKnow{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ================= HEADING SECTION ================= */
+
+.things-header{
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ThinktoKnowh1{
+    font-family: "Aboreto", sans-serif;
+    font-size: 70px;
+    color: rgb(105, 107, 54);
+    margin-bottom: 20px;
+}
+
+.things-description{
+    font-family: "Yaldevi", sans-serif;
+    font-size: 20px;
+    color: rgb(105, 107, 54);
+    line-height: 1.8;
+}
+
+/* ================= CARD CONTAINER ================= */
+
+.things-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* ================= CARD ================= */
+
+.things-card{
+    width: 260px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.things-icon{
+    width: 71px;
+    height: 71px;
+    object-fit: contain;
+}
+
+.things-title{
+    font-family: "Aboreto", sans-serif;
+    font-size: 32px;
+    color: rgb(105, 107, 54);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.things-text{
+    font-family: "Yaldevi", sans-serif;
+    font-size: 14px;
+    color: rgb(105, 107, 54);
+    line-height: 1.7;
+}
+
+/* ================= MOBILE VIEW ================= */
+
+@media screen and (max-width: 768px){
+
+    .ThinktoKnow{
+        padding: 20px 15px;
+    }
+
+    .things-header{
+        margin-bottom: 30px;
+    }
+
+    .ThinktoKnowh1{
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    .things-description{
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 0 10px;
+    }
+
+    .things-cards{
+        gap: 20px;
+    }
+
+    .things-card{
+        width: 100%;
+        max-width: 300px;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .things-title{
+        font-size: 24px;
+    }
+
+    .things-text{
+        font-size: 14px;
+    }
+
+    .things-icon{
+        width: 60px;
+        height: 60px;
+    }
+
+}
