@@ -4,7 +4,7 @@ import "../styles/Rout.css";
 export default function Route({
   title = "SEE THE ROUTE",
   subtitle = "Click to open the map",
-  mapLink = "https://maps.google.com",
+  mapLink = "https://maps.app.goo.gl/EpGrTyT14Tbo1Q1D7?g_st=aw",
   circleColor = "",
   textColor = "",
   backgroundColor = "transparent",
