@@ -2,12 +2,13 @@ import React from "react";
 import "../styles/Rout.css";
 
 export default function Route({
-  title = "SEE THE ROUTE",
+  title = "",
   subtitle = "Click to open the map",
   mapLink = "https://maps.app.goo.gl/EpGrTyT14Tbo1Q1D7?g_st=aw",
   circleColor = "",
   textColor = "",
   backgroundColor = "transparent",
+  showicon=false
 }) {
   return (
     <div
@@ -31,8 +32,8 @@ export default function Route({
       >
         {subtitle}
       </p>
-
-      <a
+<div className="icon">
+   <a
         href={mapLink}
         target="_blank"
         rel="noopener noreferrer"
@@ -44,14 +45,19 @@ export default function Route({
           className="circle1"
          
         >
-          <div
+       
+        </div>
+           <div
             className="circle"
             style={{
               background: circleColor,
             }}
-          ></div>
-        </div>
-      </a>
+          >
+
+            {showicon&&<img width={"100%"} src="/9776798.png" alt="" />}
+          </div>
+      </a></div>
+     
     </div>
   );
 }

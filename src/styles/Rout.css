@@ -25,6 +25,8 @@
     width: 66px;
     height: 66px;
     border-radius: 50%;
+    position: absolute;
+    z-index: 1;
 
 }
 .circle1 {
@@ -35,10 +37,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   animation: rotateScale 4s linear infinite;
 }
-
+.icon>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @keyframes rotateScale {
   0% {
     transform: rotate(0deg) scale(1);
@@ -95,7 +100,7 @@
       .route{
        
         gap: 0.8rem;
-        padding: 15px;
+        padding: 0;
     }
 
     .route>h2{

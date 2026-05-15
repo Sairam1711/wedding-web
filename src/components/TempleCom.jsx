@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import car1 from "/car1.png";
+import templeImagem from "/uQ5GdDW5jaPT8LYNBYabSn2bj0.avif";
 import templeImage from "/temple.avif";
 import second from "/second.avif";
 import three from "/three.avif";
@@ -51,14 +52,14 @@ export default function TempleCom() {
           <div className="light-container m"></div>
           <div className="light-container m" style={{height:!isMobile?"40vh":"0vh"}}></div>
         <Component />
-        <div  className="light-container">
+        <div style={{height:"120vh"}}  className="light-container">
            <Grid />
+            
         </div>
-       <Route mapLink="https://maps.app.goo.gl/EpGrTyT14Tbo1Q1D7?g_st=aw" /> 
-      </div>
-
-      <div className="car">
-        <img className="car1" src={car1} alt="" />
+         <Route mapLink="https://maps.app.goo.gl/EpGrTyT14Tbo1Q1D7?g_st=aw" showicon={true} /> 
+         <img className="bride" src="/original-f67e54b538c4397991ec3c91ebd383ae-removebg-preview.png" alt="" />
+      
+     
       </div>
     </div>
   );

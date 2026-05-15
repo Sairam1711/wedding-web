@@ -39,7 +39,6 @@ export default function Card({
         >
           {description}
         </p>
-        <p>Your welcome</p>
       </div>
     </div>
   );

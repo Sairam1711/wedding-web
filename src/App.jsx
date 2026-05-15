@@ -12,19 +12,19 @@ import Countdown from "./components/Countdown";
 import Fireworks from "./components/Fireworks";
 
 function App() {
-    const [isMobile, setIsMobile] = useState(false);
-  
-    useEffect(() => {
-      const checkScreen = () => {
-        setIsMobile(window.innerWidth <= 790);
-      };
-  
-      checkScreen();
-   console.log(window.innerWidth,790);
-      window.addEventListener("resize", checkScreen);
-  
-      return () => window.removeEventListener("resize", checkScreen);
-    }, []);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth <= 790);
+    };
+
+    checkScreen();
+    console.log(window.innerWidth, 790);
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
@@ -46,14 +46,13 @@ function App() {
 
   return (
     <>
-      <TempleCom  />
+      <TempleCom />
 
       <TempleComD
         bodyImage="/second.avif"
-        carImage="/car2.png"
+        carImage="/PngItem_61124.png"
         title="Please RSVP"
         subtitle="Click to message on WhatsApp"
- 
       >
         <div className="section2">
           <BrideAndGroom />
@@ -63,17 +62,22 @@ function App() {
 
       <TempleComD
         bodyImage="/four.avif"
-        carImage="/car3.png"
+        carImage="/NicePng_marriage-clipart-png_2499291.png"
         title="Follow the action"
         subtitle="Click to open our Instagram page"
-         
       >
         <div className="section3">
           <ThingsToKnow />
         </div>
       </TempleComD>
 
-      <TempleComD bodyImage="/three.avif" showCar={false} showRoute={false}>
+      <TempleComD
+        bodyImage={
+          isMobile ? "/tkkXhQriBw9Rr0mZOj2I9jY7IA.avif" : "/three.avif"
+        }
+        showCar={false}
+        showRoute={false}
+      >
         <div className="section4">
           <Countdown />
         </div>

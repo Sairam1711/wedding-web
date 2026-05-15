@@ -19,10 +19,11 @@ export default function TempleComD({
   subtitle = "Click to open the map",
   mapLink = "https://maps.google.com",
 }) {
+  console.log(bodyImage==="/tkkXhQriBw9Rr0mZOj2I9jY7IA.avif");
   return (
     <div className="temple-com">
       {/* Top Temple Image */}
-      <img className={bodyImage!=="/three.avif"?"temple-image":"temple-image noH"} src={bodyImage} alt="Temple" />
+      <img className={(bodyImage==="/tkkXhQriBw9Rr0mZOj2I9jY7IA.avif")?"temple-image noH":"temple-image"} src={bodyImage} alt="Temple" />
 
       <div className="temple-body">
         {/* Lights */}

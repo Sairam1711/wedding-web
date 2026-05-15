@@ -33,6 +33,9 @@
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .temple-text {
   display: flex;
@@ -164,13 +167,10 @@
 }
 .car1{
 
-  width: 988px;
-  height: 656px;
+  width: 90dvw;
   object-fit: contain;
-
   position: absolute;
-  scale: 1.5;
-  bottom: -200px;
+  bottom: -0;
 }
 .car{
   align-items: center;
@@ -182,24 +182,31 @@
   width: 250px;
   height: 400px;
   overflow: hidden;
-  position: relative;
-  top: 110px;
-  align-self: center;
-    border-radius: 100px;
+  border-radius: 50px;
+  align-self: flex-end;
+
 }
 
 .slide-track{
+  height: 100%;
   display: flex;
   animation: slide 9s infinite;
 }
 
 .slide-track img{
   width: 250px;
-  height: 400px;
+  height: auto;
   object-fit: cover;
-  flex-shrink: 0;
   border-radius: 20px;
 }
+
+.bride{
+  width: 50%;
+  justify-items:end; 
+  margin-top: auto;
+  z-index: 1;
+}
+
 
 /* 3 Image Auto Slider */
 @keyframes slide {
@@ -230,11 +237,10 @@
   position: absolute;
   }
 .framebody{
-
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+
 }
 .section2{
   margin-top: 10rem;
@@ -281,9 +287,7 @@
 
  .car1{
     height: auto;
-    scale: 1.2;
-    height: 500px;
-    bottom: -100px;
+    scale: 1;
   }
 
   .section2{
@@ -293,11 +297,12 @@
     gap: 15px;
   }
    .frame{
-    scale: 0.8;
+    scale: 1;
   }
   .slider{
-    scale: 0.8;
-   top: 60px;
+    scale: 1;
+    position: relative;
+    bottom: -50px;
   }
   .section4{
     padding: 3rem 2rem;
@@ -331,13 +336,12 @@
   }
   .slider{
     scale: 0.8;
-   top: 60px;
+    height: 420px;
+   top: 50px;
   }
   .car1{
     height: auto;
     scale: 1;
-    height: 500px;
-    bottom: -200px;
   }
 
   .section2{
@@ -348,7 +352,7 @@
   }
 
   .section3{
-    padding: 15px;
+ 
   }
 
   .section4{
@@ -367,7 +371,7 @@
 @media screen and (max-width: 428px) {
   
   .m{
-  height: 40vh  ;
+  height: 70vh  ;
 
   }
 .frame{
@@ -375,7 +379,7 @@
   }
   .slider{
     scale: 0.8;
-   top: 60px;
+   top: 50px;
   }
   
   .temple-image{
@@ -394,6 +398,12 @@
     width: 100%;
     height: auto;
     scale: 1;
-    bottom: -110px;
+    bottom: -0px;
   }
+  .bride{
+
+  width: 40%;
+ 
 }
+}
+
