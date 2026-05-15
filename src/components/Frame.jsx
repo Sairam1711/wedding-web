@@ -14,10 +14,11 @@ export default function Frame() {
 
           <img src={image1} alt="Image 1" />
         </div>
+         
       </div>
-      <div className="frame">
+     {/* <div className="frame">
           <img  src={imageFrame} alt="Frame" />
-      </div>
+    </div> */}
     
     </div>
   );
