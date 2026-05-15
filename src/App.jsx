@@ -1,58 +1,80 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense, useMemo } from "react";
 import Lenis from "@studio-freight/lenis";
 
 import "./App.css";
-import BrideAndGroom from "./components/BrideAndGroom";
-import TempleCom from "./components/TempleCom";
-import TempleComD from "./components/TempleComG";
-import Frame from "./components/Frame";
-import Route from "./components/Route";
-import ThingsToKnow from "./components/ThingsToKnow";
-import Countdown from "./components/Countdown";
-import Fireworks from "./components/Fireworks";
+
+// Lazy Load Components
+const BrideAndGroom = lazy(() => import("./components/BrideAndGroom"));
+const TempleCom = lazy(() => import("./components/TempleCom"));
+const TempleComD = lazy(() => import("./components/TempleComG"));
+const Frame = lazy(() => import("./components/Frame"));
+const Countdown = lazy(() => import("./components/Countdown"));
+const Fireworks = lazy(() => import("./components/Fireworks"));
+
 const message = `
 Wishing the beautiful Bride & Groom a lifetime of love, happiness, and togetherness.
 May your new journey be filled with joy, laughter, and endless blessings.
 Congratulations on your wedding!`;
 
-const whatsappLink = `https://wa.me/919940344758?text=${encodeURIComponent(message)}`;
 function App() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= 790
+  );
 
+  // Optimized WhatsApp Link
+  const whatsappLink = useMemo(() => {
+    return `https://wa.me/919940344758?text=${encodeURIComponent(message)}`;
+  }, []);
+
+  // Responsive Check (Optimized)
   useEffect(() => {
+    let timeout;
+
     const checkScreen = () => {
-      setIsMobile(window.innerWidth <= 790);
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => {
+        setIsMobile(window.innerWidth <= 790);
+      }, 100);
     };
 
-    checkScreen();
-    console.log(window.innerWidth, 790);
     window.addEventListener("resize", checkScreen);
 
-    return () => window.removeEventListener("resize", checkScreen);
+    return () => {
+      window.removeEventListener("resize", checkScreen);
+      clearTimeout(timeout);
+    };
   }, []);
+
+  // Smooth Scroll
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.5,
+      duration: 1.2,
       smoothWheel: true,
-      smoothTouch: true,
+      smoothTouch: false,
     });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    let rafId;
 
-    requestAnimationFrame(raf);
+    const raf = (time) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
+
+    rafId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, []);
 
   return (
-    <>
+    <Suspense fallback={<div className="loader">Loading...</div>}>
+      {/* First Section */}
       <TempleCom />
 
+      {/* RSVP Section */}
       <TempleComD
         bodyImage="/second.avif"
         carImage="/PngItem_61124.png"
@@ -68,9 +90,12 @@ function App() {
         </div>
       </TempleComD>
 
+      {/* Countdown Section */}
       <TempleComD
         bodyImage={
-          isMobile ? "/tkkXhQriBw9Rr0mZOj2I9jY7IA.avif" : "/three.avif"
+          isMobile
+            ? "/tkkXhQriBw9Rr0mZOj2I9jY7IA.avif"
+            : "/three.avif"
         }
         showCar={false}
         showRoute={false}
@@ -78,12 +103,16 @@ function App() {
         <div className="section4">
           <Countdown />
         </div>
-        <Fireworks
-          width={window.innerWidth - 100}
-          height={window.innerHeight}
-        />
+
+        {/* Render fireworks only in desktop */}
+        {!isMobile && (
+          <Fireworks
+            width={window.innerWidth}
+            height={window.innerHeight}
+          />
+        )}
       </TempleComD>
-    </>
+    </Suspense>
   );
 }
 
