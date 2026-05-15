@@ -61,17 +61,6 @@ function App() {
       </TempleComD>
 
       <TempleComD
-        bodyImage="/four.avif"
-        carImage="/NicePng_marriage-clipart-png_2499291.png"
-        title="Follow the action"
-        subtitle="Click to open our Instagram page"
-      >
-        <div className="section3">
-          <ThingsToKnow />
-        </div>
-      </TempleComD>
-
-      <TempleComD
         bodyImage={
           isMobile ? "/tkkXhQriBw9Rr0mZOj2I9jY7IA.avif" : "/three.avif"
         }

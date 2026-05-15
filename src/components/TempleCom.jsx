@@ -57,7 +57,7 @@ export default function TempleCom() {
             
         </div>
          <Route mapLink="https://maps.app.goo.gl/EpGrTyT14Tbo1Q1D7?g_st=aw" showicon={true} /> 
-         <img className="bride" src="/original-f67e54b538c4397991ec3c91ebd383ae-removebg-preview.png" alt="" />
+         <img className="car1" src="/NicePng_marriage-clipart-png_2499291.png" alt="" />
       
      
       </div>
