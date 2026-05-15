@@ -8,7 +8,8 @@ export default function Route({
   circleColor = "",
   textColor = "",
   backgroundColor = "transparent",
-  showicon=false
+  showicon=false,
+  routeIcon="/location-map-white-icon-symbol.png",
 }) {
   return (
     <div
@@ -49,12 +50,9 @@ export default function Route({
         </div>
            <div
             className="circle"
-            style={{
-              background: circleColor,
-            }}
           >
 
-            {/* {showicon&&<img width={"100%"} src="/9776798.png" alt="" />} */}
+            {showicon&&<img width={"100%"} src={routeIcon} alt="" />}
           </div>
       </a></div>
      

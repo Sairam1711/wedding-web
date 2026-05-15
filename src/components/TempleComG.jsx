@@ -18,6 +18,7 @@ export default function TempleComD({
   title = "SEE THE ROUTE",
   subtitle = "Click to open the map",
   mapLink = "https://maps.google.com",
+  routeIcon = "/location-map-white-icon-symbol.png",
 }) {
   console.log(bodyImage==="/tkkXhQriBw9Rr0mZOj2I9jY7IA.avif");
   return (
@@ -31,7 +32,7 @@ export default function TempleComD({
         {/* Extra Content */}
         {children}
         {showRoute && (
-          <Route title={title} subtitle={subtitle} mapLink={mapLink} />
+          <Route title={title} subtitle={subtitle} mapLink={mapLink} routeIcon={routeIcon} showicon={true} />
         )}
         {/* Car */}
         {showCar && (

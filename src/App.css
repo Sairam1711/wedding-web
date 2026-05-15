@@ -68,7 +68,7 @@
 
 .temple-title {
   color: #fffdeb;
-  font-family: 'Cormorant';
+  font-family: 'Playfair Display';
   margin: 0;
   font-size: 4rem;
 }
@@ -260,7 +260,7 @@
 }
 
 .section2 {
-  width: 100vw;
+  width: 100%;
   margin-top: 10rem;
   place-items: center;
   box-sizing: border-box;
@@ -400,12 +400,12 @@
 @media screen and (max-width: 428px) {
 
   .m {
-    height: 70vh;
+    height: 40vh;
 
   }
 
   .temple-image {
-    height: 400vh;
+    height: 410vh;
   }
 
   .noH {

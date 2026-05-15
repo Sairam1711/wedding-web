@@ -2,13 +2,13 @@
     font-family: sans-serif;
     font-size: 70px;
     font-weight: 150;
-    color: #dcdda6;
+    color: white;
 }
 .route>p{
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: #dcdda6;
+    color: white;
 }
 .route{
     position: sticky;
@@ -20,17 +20,31 @@
     gap: 1rem;
     top: 100px;
 }
-.circle{
-    border: 10px solid #f3ecba;
-    width: 66px;
-    height: 66px;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
+.circle {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
 
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 .circle1 {
-  border: 2px solid #f3ecba;
+  border: 2px solid white;
   width: 134px;
   height: 134px;
   border-radius: 50%;
@@ -98,7 +112,7 @@
 }
 @media screen and (max-width: 428px) {
       .route{
-       
+       justify-content: start;
         gap: 0.8rem;
         padding: 0;
     }

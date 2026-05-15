@@ -31,9 +31,9 @@ export default function TempleCom() {
       <div className="temple-body">
         <div className="light-container">
           <div className="temple-text">
-            <h1 className="temple-title">Saravana Kumar</h1>
+            <h1 className="temple-title">Saravana</h1>
             <h2 className="temple-title">weds </h2>
-            <h1 className="temple-title">Mahalakshmi</h1>
+            <h1 className="temple-title">Maha</h1>
           </div>
           <div className="temple-text"></div>
           <div className="temple-text"></div>
@@ -56,7 +56,7 @@ export default function TempleCom() {
            <Grid />
             
         </div>
-         <Route mapLink="https://maps.app.goo.gl/EpGrTyT14Tbo1Q1D7?g_st=aw" showicon={true} /> 
+         <Route mapLink="https://maps.app.goo.gl/EpGrTyT14Tbo1Q1D7?g_st=aw" showicon={true} routeIcon={"/location-map-white-icon-symbol.png"} /> 
          <img className="car1" src="/NicePng_marriage-clipart-png_2499291.png" alt="" />
       
      

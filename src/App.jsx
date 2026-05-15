@@ -10,7 +10,12 @@ import Route from "./components/Route";
 import ThingsToKnow from "./components/ThingsToKnow";
 import Countdown from "./components/Countdown";
 import Fireworks from "./components/Fireworks";
+const message = `
+Wishing the beautiful Bride & Groom a lifetime of love, happiness, and togetherness.
+May your new journey be filled with joy, laughter, and endless blessings.
+Congratulations on your wedding!`;
 
+const whatsappLink = `https://wa.me/919940344758?text=${encodeURIComponent(message)}`;
 function App() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -53,6 +58,9 @@ function App() {
         carImage="/PngItem_61124.png"
         title="Please RSVP"
         subtitle="Click to message on WhatsApp"
+        mapLink={whatsappLink}
+        routeIcon="/WhatsAppLogo.png"
+        showRoute={true}
       >
         <div className="section2">
           <BrideAndGroom />

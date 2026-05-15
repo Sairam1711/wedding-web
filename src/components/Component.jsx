@@ -8,10 +8,10 @@ export default function Component() {
       <img className="vinayagar" src={vinayagar} alt="vinayagar" />
       <h4>
 Parents of the Groom <br />
-        R Chandrasekaran
+        R CHANDRASEKARAN
       </h4>
       <div className="h-line"></div>
-      <h4>C. Balambigai</h4>
+      <h4>C. BALAMBIGAI</h4>
       <h2>INVITE</h2>
       <h4>You to join us in the wedding celebrations of</h4>
       <h1>
