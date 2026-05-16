@@ -104,13 +104,13 @@ function App() {
           <Countdown />
         </div>
 
-        {/* Render fireworks only in desktop */}
-        {!isMobile && (
+      
+  
           <Fireworks
-            width={window.innerWidth}
+            width={window.innerWidth-10}
             height={window.innerHeight}
           />
-        )}
+     
       </TempleComD>
     </Suspense>
   );
