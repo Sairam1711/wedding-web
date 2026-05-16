@@ -107,7 +107,7 @@ function App() {
       
   
           <Fireworks
-            width={window.innerWidth-10}
+            width={window.innerWidth-20}
             height={window.innerHeight}
           />
      
