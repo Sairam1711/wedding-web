@@ -33,7 +33,7 @@ export default function TempleCom() {
           <div className="temple-text">
             <h1 className="temple-title">SARAVANA</h1>
             <h2 className="temple-title">WEDS </h2>
-            <h1 className="temple-title">MAHALAKSHMI</h1>
+            <h1 className="temple-title">MAHA</h1>
           </div>
           <div className="temple-text"></div>
           <div className="temple-text"></div>
