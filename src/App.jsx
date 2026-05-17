@@ -125,7 +125,7 @@ const handleScrollButton = () => {
 
   const distance = targetPosition - startPosition;
 
-  const duration = 10000; // Slow smooth scroll
+  const duration = 6000; // Slow smooth scroll
   let start = null;
 
   const smoothAutoScroll = (timestamp) => {
